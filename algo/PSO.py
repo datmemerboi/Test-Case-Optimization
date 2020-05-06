@@ -3,6 +3,9 @@
 
 import numpy as np
 from .transformer import fn_transformer
+import matplotlib.pyplot as plt
+import time
+
 
 '''
 If you are running runPSO.py, change the previous line with:
@@ -40,6 +43,8 @@ class PSO():
 		self.record_mode = False
 		self.record_value = {'X': [], 'V': [], 'Y': []}
 
+		self.xaxis = []; self.yaxis = []
+
 	def update_V(self):
 		r1 = np.random.rand(self.pop, self.dim)
 		r2 = np.random.rand(self.pop, self.dim)
@@ -65,7 +70,7 @@ class PSO():
 	def update_gbest(self):
 		if self.gbest_y < self.Y.max():
 			self.gbest_x = self.X[self.Y.argmin(), :].copy()
-			self.gbest_y = self.Y.min()
+			self.gbest_y = self.Y.max()
 
 	def recorder(self):
 		if not self.record_mode:
@@ -74,19 +79,28 @@ class PSO():
 		self.record_value['V'].append(self.V)
 		self.record_value['Y'].append(self.Y)
 
+	def plotTime(self, iter_num, before, after):
+		self.xaxis.append( iter_num )
+		self.yaxis.append( after-before )
+
 	def run(self, max_iter=None):
 		print("Running PSO...")
 		self.max_iter = max_iter or self.max_iter
 		for iter_num in range(self.max_iter):
-			print("\tIteration ",iter_num," complete")
+			before = time.time()
 			self.update_V()
 			self.recorder()
 			self.update_X()
 			self.cal_y()
 			self.update_pbest()
 			self.update_gbest()
+			self.plotTime(iter_num, before, time.time() )
 
 		self.gbest_y_hist.append(self.gbest_y)
+		
+		plt.plot(self.xaxis, self.yaxis)
+		plt.show()
+		
 		return self
 
 	fit = run
