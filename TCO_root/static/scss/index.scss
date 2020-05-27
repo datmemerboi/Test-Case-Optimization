@@ -1,0 +1,27 @@
+@import "fonts";
+@import "background";
+@import "links";
+@import "scrollbar";
+
+body {
+	font-family: $font-fam;
+	background-color: $primary-bgColor;
+	color: $primary-color;
+	font-size:$body-font-size;
+}
+h1 {
+	letter-spacing: 2px;
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+.container {
+	width: 40vw; height: auto;
+	position: absolute; left: 30vw;
+}
+p {
+	font-size: $body-font-size;
+	text-align: justify;
+	color: $dull-primary-color;
+}

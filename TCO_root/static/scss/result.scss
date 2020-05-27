@@ -1,0 +1,39 @@
+@import "fonts";
+@import "background";
+@import "links";
+@import "scrollbar";
+
+body {
+	font-family: $font-fam;
+	font-size: $body-font-size;
+	color: $primary-color;
+	background-color:$primary-bgColor;
+}
+.container {
+	width: 58vw; height: auto;
+	position: absolute; left: 20vw;
+	padding-left: 1em;
+	padding-bottom: 1em;
+}
+.relativity {
+	position: relative; top: 50vh; left: 0;
+	width: 96vw; height: auto;
+}
+code {
+	font-size: $small-font-size;
+	color: $orange-coder-color;
+	font-family:monospace;
+}
+.result-chart-canvas {
+	max-width: 96vw; max-height: 90vh;
+}
+.result-micro-canvas {
+	position: relative; left: 2vw; top: 3vh;
+	max-width: 50vw; max-height: 50vh;
+}
+.bigger-code {
+	font-size: $medium-font-size;
+}
+.no-select {
+	user-select: none;
+}

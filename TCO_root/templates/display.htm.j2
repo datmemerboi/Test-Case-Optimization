@@ -1,0 +1,57 @@
+{% load static %}
+<html>
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{%static 'css/display.css' %}">
+	{% block content %}
+		<title>Data Display</title>
+		<table>
+			<thead>
+			<th>TEST ID</th>
+			<th>TEST CASE</th>
+			<th>PRE-CONDITIONS</th>
+			<th>TEST STEPS</th>
+			<th>PRECEDENCE</th>
+			<th>COMPLEXITY</th>
+			<th>TEST DATA</th>
+			<th>EXPECTED RESULT</th>
+			<th>ACTUAL RESULT</th>
+			<th>PASS/FAIL</th>
+			</thead>
+			{% for record in data %}
+				<tr class="capsule">
+					<td>
+						{{record.TEST_ID}}
+					</td>
+					<td>
+						{{record.TEST_CASE}}
+					</td>
+					<td>
+						{{record.PRE_CONDITIONS}}
+					</td>
+					<td>
+						{{record.TEST_STEPS}}
+					</td>
+					<td class="center-column">
+						{{record.PRECEDENCE}}
+					</td>
+					<td class="center-column">
+						{{record.COMPLEXITY}}
+					</td>
+					<td>
+						{{record.TEST_DATA}}
+					</td>
+					<td>
+						{{record.EXPECTED_RESULT}}
+					</td>
+					<td>
+						{{record.ACTUAL_RESULT}}
+					</td>
+					<td>
+						{{record.PASS_FAIL}}
+					</td>
+				</tr>
+				<tr class="null-row"></tr>
+			{% endfor %}
+		</table>
+	{% endblock %}
+</html>

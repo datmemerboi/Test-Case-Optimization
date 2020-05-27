@@ -1,0 +1,17 @@
+{% extends 'base/index_base.html'%}
+{% block header %}
+	<title>Results Index</title>
+{% endblock %}
+{%block content%}
+	<h2>Index of /result/</h2>
+	<div class="container">
+		<p>The test suite <a href="/data/display/" target="_blank">dataset</a> has been optimized using both PSO and GA.</p>
+		<ul>
+			<li><a href="PSO/" target="_blank">Results of PSO</a></li>
+			<li><a href="GA/" target="_blank">Results of GA</a></li>
+			<li><a href="suite/PSO" target="_blank">Test suite from PSO</a></li>
+			<li><a href="suite/GA" target="_blank">Test suite from GA</a></li>
+			<li><a href="compare/" target="_blank">Comparison results</a></li>
+		</ul>
+	</div>
+{%endblock%}

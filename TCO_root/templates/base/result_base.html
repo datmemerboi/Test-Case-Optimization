@@ -1,0 +1,28 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/result.css' %}">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+	<script type="text/javascript" src="{%static 'js/chartColors.js'%}"></script>
+
+	
+	{%block header%}
+	{%endblock%}
+	
+	<canvas id="result-graph" class="result-chart-canvas"></canvas>
+	<br class="no-select">
+	<div class="container">
+		{%block content%}
+		{%endblock%}
+	</div>
+	<!-- <br class="no-select"><br class="no-select"><br class="no-select"><br class="no-select">
+	<br class="no-select"><br class="no-select"><br class="no-select"><br class="no-select">
+	 -->
+	<div class="container relativity">
+		{%block suite%}
+		{%endblock%}
+	</div>
+	
+</html>

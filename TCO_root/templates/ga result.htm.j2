@@ -1,0 +1,22 @@
+{%extends 'base/result_base.html'%}
+{%load static%}
+{%block header%}
+	<title>GA Result</title>
+{%endblock%}
+
+{%block content%}
+	<p>Best genome: <code class="bigger-code">{{GA.x}}</code></p>
+	<p>Best fitness score: <code class="bigger-code">{{GA.fx}}</code></p>
+	<p>Overall execution time: <code class="bigger-code">{{GA.time}}</code> seconds</p>
+	<p>Overall accuracy: <code class="bigger-code">{{GA.accuracy}}%</code></p>
+	<p>And the test suite obtained after optimizaiton</p>
+	
+	<script type="text/javascript">
+		var xaxis = {{xaxis}}; var yaxis = {{yaxis}} ;
+	</script>
+	<script type="text/javascript" src="{%static 'js/charts/GA.js'%}"></script>
+{%endblock%}
+
+{%block suite%}
+	{%include 'ga suite.htm.j2'%}
+{%endblock%}

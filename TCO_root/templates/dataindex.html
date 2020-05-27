@@ -1,0 +1,14 @@
+{% extends 'base/index_base.html'%}
+{% block header %}
+	<title>Data Index</title>
+{% endblock %}
+{%block content%}	
+	<h2>Index of /data/</h2>
+	<div class="container">
+		<ul>
+			<li><a href="display/" target="_blank">View Dataset used</a></li>
+			<li><a href="csv/" target="_blank">Download .csv of dataset</a></li>
+			<li><a href="tsv/" target="_blank">Download .tsv of dataset</a></li>
+		</ul>
+	</div>
+{%endblock%}

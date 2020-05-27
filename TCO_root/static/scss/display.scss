@@ -1,0 +1,34 @@
+@import "fonts";
+@import "background";
+@import "scrollbar";
+
+body {
+	font-family: $font-fam;
+	background-color: $primary-bgColor;
+	color: $primary-color;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+thead {
+	font-size: $small-font-size;
+	color: $red-color;
+}
+td {
+	padding: 6px;
+	font-size: $small-font-size;
+}
+.center-column {
+	text-align:center;
+}
+.capsule {
+	background-color: $capsule-bgColor;
+}
+.null-row {
+	height: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $red-color;
+}

@@ -1,0 +1,26 @@
+{%extends 'base/algorithm_base.html'%}
+{%block header%}
+	<title>Particle Swarm Optimizer</title>
+{%endblock%}
+{%block algorithm%}
+	<h1>Particle Swarm Optimizer</h1>
+	<div class="container">
+		<h2>What is Particle Swarm Algorithm?</h2>
+		<p>Particle Swarm Algorithm is a meta-heuristic algorithm which is mainly used to optimize a problem by repeatedly trying to provide a solution with regard to measure of general quality among the candidate solutions.</p>
+		<p>It makes no assumptions about the problem being optimized and can search very large spaces of candidate solutions. PSO does not use the gradient of the problem being optimized, which means PSO does not require that the optimization problem be differentiable</p>
+
+		<h2>How does it work?</h2>
+		<p>Particle Swarm Algorithm works by introducing candidate solutions for a mathematical equation (to be optimized) as individual particles. Each of these particles are initialized with a velocity, position and an overall inertial weight for all particles. After each iteration, the <i>update_position</i> and <i>update_velocity</i> functions are called, which would update the position and velocity values of the particles based on: the <i>personal best value</i> of the individual particle and the <i>global best value</i> of all particles in the space.</p>
+		<p>After n-iterations, all particles tend to move towards the optimum center and a few even collide at this optimum point. This will be considered as the optimal output for the provided equation under the given constraints.</p>
+
+		<h2>How we use it for optimization?</h2>
+		<p>The result from the algorithm will be the <i>gBest_X</i> and <i>gBest_Y</i>. Based on this gBest_Y value, the weightage of each test case in the input test suite will be rearranged. This reordered dataset will be the test suite optimized by PSO.</p>
+		<h2>Code to initialize</h2>
+		{% block PSO%}
+			{%for line in pso_content%}
+				<code>{{line}}</code>
+				<br>
+			{%endfor%}
+		{% endblock %}
+	</div>
+{%endblock%}

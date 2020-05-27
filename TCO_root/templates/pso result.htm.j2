@@ -1,0 +1,22 @@
+{%extends 'base/result_base.html'%}
+{%load static%}
+{%block header%}
+	<title>PSO Result</title>
+{%endblock%}
+
+{%block content%}
+	<p>Global best solution of Swarm: <code class="bigger-code">{{PSO.x}}</code></p>
+	<p>Global best fitness: <code class="bigger-code">{{PSO.fx}}</code></p>
+	<p>Overall execution time: <code class="bigger-code">{{PSO.time}}</code> seconds</p>
+	<p>Overall accuracy: <code class="bigger-code">{{PSO.accuracy}}%</code></p>
+	<p>And the test suite obtained after optimizaiton</p>
+	
+	<script type="text/javascript">
+		var xaxis = {{xaxis}}; var yaxis = {{yaxis}} ;
+	</script>
+	<script type="text/javascript" src="{%static 'js/charts/PSO.js'%}"></script>
+{%endblock%}
+
+{%block suite%}
+	{%include 'pso suite.htm.j2'%}
+{%endblock%}

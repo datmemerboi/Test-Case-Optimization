@@ -1,0 +1,25 @@
+{%extends 'base/algorithm_base.html'%}
+{%block header%}
+	<title>Gentic Algorithm</title>
+{%endblock%}
+{%block algorithm%}
+	<h1>Genetic Algorithm</h1>
+	<div class="container">
+		<h2>What is Genetic Algorithm?</h2>
+		<p>Genetic Algorithm is a meta-heuristic algorithm inspired from the working of natural selection, belonging to a large list of evolutionary algorithms. It is commonly used to generate solutions of high quality for problems of optimization.</p>
+		<p>It is based on the concepts of Darwin's Theory of Evolution, which states that the most powerful trait is handed down generation-to-generation.</p>
+
+		<h2>How does it work?</h2>
+		<p>Genetic Algorithm works by creating an entire population of possible solutions, which act as the first generation (first iteration) of the algorithm. The candidate with highest fitness is chosen to be the parent for the next generation, whereas the least fit solutions are terminated. The traits (or genes) from these parent chromosomes are used to create the next generation population, by following genetic operations of <i>mutation</i> and <i>crossover</i>. Each generation has its own population and, after n - iterations, only the best solutions with the most effective traits remain persistent.</p>
+		
+		<h2>How we use it for optimization?</h2>
+		<p>The result from the algorithm will be the <i>best_genome</i> and <i>best_fitness</i>. Based on this fitness value, the weightage of each test case in the input test suite will be rearranged. This reordered dataset will be the test suite optimized by GA.</p>
+		<h2>Code to Initialize</h2>
+		{% block GA %}
+			{%for line in ga_content%}
+				<code>{{line}}</code>
+				<br>
+			{%endfor%}
+		{% endblock %}
+	</div>
+{%endblock%}

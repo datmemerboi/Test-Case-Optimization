@@ -1,0 +1,36 @@
+{%extends 'base/result_base.html'%}
+{%load static%}
+
+{%block header%}
+	<title>Comparison</title>
+{%endblock%}
+
+{%block content%}
+	<p>The graph shows the time taken (in seconds) by each iteration of both Particle Swarm Algorithm (in red) and Genetic Algorithm (in green).</p>
+	<h2>Overall time</h2>
+	
+	<canvas id="time" class="result-micro-canvas"></canvas>
+	<br class="no-select"><br class="no-select">
+	
+	<p>The pie chart representing the overall time taken by both the optimizers. From the graph, it is clear that PSO takes <span id="more-or-less"></span> GA.</p>
+	
+	<h2>Equality</h2>
+	<p>The resultant test suites from both (<a href="/results/PSO/">PSO</a> and 
+		<a href="/results/GA">GA</a>) 
+		show that both the datasets are <b><span id="equal-or-not"></span></b>.</p>
+	
+	<script type="text/javascript">
+		var ga_yaxis = {{GA.yaxis}};
+		var pso_xaxis = {{PSO.xaxis}}; var pso_yaxis = {{PSO.yaxis}};
+		var pso_time = {{PSO.time}};
+		var ga_time = {{GA.time}};
+		
+		if( pso_time==ga_time )
+			document.getElementById('more-or-less').innerHTML = "the <b>same</b> time as"
+		else
+			pso_time>ga_time ? document.getElementById('more-or-less').innerHTML = "<b>more</b> time than" : document.getElementById('more-or-less').innerHTML = "<b>lesser</b> time than";
+		{{Equality}}==1 ? document.getElementById('equal-or-not').innerHTML = "equal" : document.getElementById('equal-or-not').innerHTML = "not equal"
+	</script>
+	
+	<script type="text/javascript" src="{%static 'js/charts/compare.js'%}"></script>
+{%endblock%}

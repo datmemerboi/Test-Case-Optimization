@@ -1,0 +1,36 @@
+{%extends 'base/result_suite_base.html'%}
+{%block header%}
+	<title>{{title}}</title>
+{%endblock%}
+
+{%block content%}
+	{% for record in data %}
+		<tr class="capsule">
+			<td>
+				{{record.TEST_ID}}
+			</td>
+			<td>
+				{{record.TEST_CASE}}
+			</td>
+			<td>
+				{{record.PRE_CONDITIONS}}
+			</td>
+			<td class="center-column">
+				{{record.PRECEDENCE}}
+			</td>
+			<td class="center-column">
+				{{record.COMPLEXITY}}
+			</td>
+			<td class="center-column">
+				{{record.PRE_CON_COUNT}}
+			</td>
+			<td class="center-column">
+				{{record.WEIGHTAGE}}
+			</td>
+			<td class="center-column">
+				{{record.DIFF}}
+			</td>
+		</tr>
+		<tr class="null-row"></tr>
+	{% endfor %}
+{%endblock%}

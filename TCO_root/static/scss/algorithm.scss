@@ -1,0 +1,32 @@
+@import "fonts";
+@import "background";
+@import "scrollbar";
+@import "links";
+
+body {
+	font-family: $font-fam;
+	font-size: $body-font-size;
+	color: $primary-color;
+	background-color:$primary-bgColor;
+}
+h1 {
+	letter-spacing: 2px;
+	text-align: center;
+}
+h2 {
+	font-size: $h2-font-size;
+}
+.container {
+	width: 58vw; height: auto;
+	position: absolute; left: 20vw;
+	padding-left: 1em;
+	padding-bottom: 1em;
+}
+p {
+	color: $dull-primary-color;
+	text-align: justify;
+}
+code {
+	font-size: $small-font-size;
+	color: $orange-coder-color;
+}
