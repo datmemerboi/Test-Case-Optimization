@@ -1,0 +1,101 @@
+TEST ID,TEST CASE,RANKING
+HOME_001,Test load of Home Page,0
+PAY_INIT_001,Check load of Payment page,1
+PAY_PORTAL_003,Test redirect to Confirmation Page,2
+LOAD_001,Test Page load functionality through URL,3
+PAY_PORTAL_002,Test Transaction confirmation,4
+PAY_INIT_002,Test payment initiation,5
+PAYMENT_OPT_003,Test display of Options based on method,6
+BOOK_LOAD_001,Test load Page for booking ticket,7
+CONFIRM_001,Test load of Confirmation Page,8
+UPI_002,Test choose of UPI option,9
+EVENT_DETAIL_001,Test load of Page for particular event,10
+SEATS_003,Test choose seat from layout,11
+SEATS_002,Check view of seat layout,12
+PAY_BUTTON_002,Test Pay button functionality,13
+MOVIE_LOAD_001,Test load page for Particular Movie,14
+SHOWTIME_002,Test Choice of Showtime,15
+EVENT_DETAIL_004,Test Book button Functionality,16
+CATEGORY_001,Test Choose Category Functionality,17
+SELECT_CITY_001,Test City Choice using Icons,18
+BOOK_EVENT_004,Test choice of seats,19
+UPI_001,Check display of UPI options,20
+SEARCHBAR_001,Check Input of Searchbar,21
+MOB_WALLET_002,Test make choice of Wallet option,22
+VOUCHER_003,Check if voucher has been applied,23
+RECOMMEND_001,Check Recommended list while Search,24
+SHOWTIME_001,Check view of Showtimes & Cinema,25
+BOOK_EVENT_003,Test Add & Remove person functionality,26
+SEATS_001,Test choice of Number of Seats,27
+SESSION_002,Test Session Timeout,28
+SEARCHBAR_003,Test Search Functionality,29
+SEATS_004,Test lock of chosen seats,30
+SELECT_CITY_003,Test City Choice from Region List,31
+SELECT_CITY_002,Test Search City using Search Bar,32
+SIGN_IN_001,Check initiation of Sign In,33
+PAY_PORTAL_001,Test load of Payment Portal Page,34
+LOGIN_001,Test Login functionality,35
+SIGN_UP_002,Test Sign Up functionality,36
+BOOK_EVENT_001,Check view of Event time,37
+EVENT_CONFIRM_002,Test transfer to Confirmation Page after payment,38
+CONFIRM_002,Check confirmed movie details display,39
+EVENT_CONFIRM_001,Test transfer to Payment Init,40
+BOOK_DATE_001,Test Date Choice for show,41
+CONFIRM_004,Check confirmed tickets display,42
+CARD_001,Check Make Payment button function,43
+SIGN_UP_001,Check switch to Sign Up button,44
+UPI_004,Test Input of Mobile Number,45
+CONTACT_001,Test input of contact details,46
+NET_BANK_004,Check Make Payment button function,47
+UPI_007,Check Make Payment button function,48
+UPI_005,Test Input of UPI ID,49
+LOGIN_002,Test Login API,50
+SIGN_UP_003,Test Sign Up API Integration,51
+CONFIRM_003,Check confirmed showtime display,52
+UPI_006,Test Input of Bank Name,53
+CONFIRM_008,Test Mail of confirmation,54
+CATEGORY_002,Test Category change while search,55
+PAY_PORTAL_004,Test redirect on cancelled transaction,56
+CONFIRM_007,Check confirmed Booking ID display,57
+PAY_BUTTON_001,Check display of Pay button,58
+CONFIRM_009,Test SMS of confirmation,59
+MOB_WALLET_004,Check Make Payment button function,60
+HOME_002,Test load of Home Page after City Icon Choice,61
+NET_BANK_002,Test make choice of Bank from icon,62
+HOME_003,Test load of Home Page after City Search Choice,63
+PAYMENT_OPT_002,Test choice of Payment method,64
+LOAD_002,Test Page Reload without crashes,65
+VOUCHER_001,Test Voucher input,66
+NET_BANK_003,Test make choice of Bank from list,67
+CARD_001,Test input of Card Details,68
+HOME_004,Test load of Home Page after Region List Choice,69
+SESSION_001,Check display of Session Timer,70
+CONFIRM_005,Check QR code generation,71
+BOOK_TICKETS_001,Test Book Ticket button Functionality,72
+TICKET_AMOUNT_001,Test display of Payable amount,73
+UPI_003,Test choice of Other UPI option,74
+PAYMENT_OPT_001,Test display of Payment methods,75
+NET_BANK_001,Test display of Bank Options,76
+BOOK_EVENT_002,Check view of Ticket prices,77
+MOB_WALLET_001,Check dispaly of mobile wallet options,78
+EVENT_DETAIL_002,Check view of Event details,79
+HOME_006,Test load of Home Page after Category choice,80
+SESSION_005,Test Timer reset,81
+SESSION_004,Test Start Again button function,82
+SESSION_003,Check display of Timeout Message,83
+EVENT_DETAIL_003,Test Event venue map function,84
+SEARCHBAR_002,Check Return back to Home,85
+MOVIE_DETAILS_001,Check view of Details of a Movie,86
+VOUCHER_002,Check Apply button,87
+MOVIE_DETAILS_002,Check view of Rating of a Movie,88
+RECOMMEND_002,Test change of Recommendation after Category,89
+SEARCHBAR_004,Test Search Results based on chosen Category,90
+MOB_WALLET_003,Check code display,91
+RECOMMEND_003,Test Filters in Recommended list,92
+CONFIRM_006,Check QR code display,93
+TICKET_DETAILS_001,Test dispaly of Ticket Details,94
+LOAD_003,Test 404 Error for Invalid URL in domain,95
+SHOWTIME_003,Test display of Showtime selected,96
+HOME_005,Test Return to Home Page on Logo Click,97
+LOGIN_003,Check switch to Login Button,98
+HELP_001,Test help link functionality,99
