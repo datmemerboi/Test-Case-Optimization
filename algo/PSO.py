@@ -6,21 +6,21 @@ from .transformer import fn_transformer
 import matplotlib.pyplot as plt
 import time
 
-
 '''
-If you are running runPSO.py, change the previous line with:
+If you are running runPSO.py, modify the line to:
 # from transformer import fn_transformer
 '''
 
 
 class PSO():
-	def __init__(self, func, dim, pop=40, max_iter=150, lb=None, ub=None, w=0.8, c1=0.5, c2=0.5):
+	def __init__(self, func, dim, pop=40, max_iter=150, lb=None, ub=None, w=0.8, c1=0.5, c2=0.5, timeplotbool=True):
 		self.func = fn_transformer(func)
 		self.w = w  # inertia
 		self.cp, self.cg = c1, c2  # parameters to control personal best, global best respectively
 		self.pop = pop  # number of particles
 		self.dim = dim  # dimension of particles, which is the number of variables of func
 		self.max_iter = max_iter  # max iter
+		self.timeplotbool = timeplotbool
 
 		self.has_constraints = not (lb is None and ub is None)
 		self.lb = -np.ones(self.dim) if lb is None else np.array(lb)
@@ -28,9 +28,9 @@ class PSO():
 		assert self.dim == len(self.lb) == len(self.ub), 'dim == len(lb) == len(ub) is not True'
 		assert np.all(self.ub > self.lb), 'upper-bound must be greater than lower-bound'
 
-		self.X = np.random.uniform(low=self.lb, high=self.ub, size=(self.pop, self.dim))
-		v_high = self.ub - self.lb
-		self.V = np.random.uniform(low=-v_high, high=v_high, size=(self.pop, self.dim))  # speed of particles
+		self.X = np.random.randint(self.lb, self.ub+1, size=(self.pop, self.dim) )
+		self.V = np.random.randint(self.lb, self.ub+1, size=(self.pop, self.dim) )
+		
 		self.Y = self.cal_y()  # y = f(x) for all particles
 		self.pbest_x = self.X.copy()  # personal best location of every particle in history
 		self.pbest_y = self.Y.copy()  # best image of every particle in history
@@ -46,8 +46,8 @@ class PSO():
 		self.xaxis = []; self.yaxis = []
 
 	def update_V(self):
-		r1 = np.random.rand(self.pop, self.dim)
-		r2 = np.random.rand(self.pop, self.dim)
+		r1 = np.random.randint(1, size=(self.pop, self.dim) )
+		r2 = np.random.randint(1, size=(self.pop, self.dim) )
 		self.V = self.w * self.V + \
 		self.cp * r1 * (self.pbest_x - self.X) + \
 		self.cg * r2 * (self.gbest_x - self.X)
@@ -69,7 +69,7 @@ class PSO():
 
 	def update_gbest(self):
 		if self.gbest_y < self.Y.max():
-			self.gbest_x = self.X[self.Y.argmin(), :].copy()
+			self.gbest_x = self.X[self.Y.argmax(), :].copy()
 			self.gbest_y = self.Y.max()
 
 	def recorder(self):
@@ -79,12 +79,17 @@ class PSO():
 		self.record_value['V'].append(self.V)
 		self.record_value['Y'].append(self.Y)
 
-	def plotTime(self, iter_num, before, after):
-		self.xaxis.append( iter_num )
-		self.yaxis.append( after-before )
+	def timeplot(self):
+		plt.figure( figsize=(25, 9))
+		plt.xlabel("Iteration Number")
+		plt.ylabel("Seconds taken")
+		plt.plot(self.xaxis, self.yaxis,
+			linewidth=4.0, color="#570E1A",
+			marker="o", mfc="#A6162E")
+		plt.savefig('plot/PSO Iter time.png')
+		plt.show()
 
 	def run(self, max_iter=None):
-		print("Running PSO...")
 		self.max_iter = max_iter or self.max_iter
 		for iter_num in range(self.max_iter):
 			before = time.time()
@@ -94,13 +99,12 @@ class PSO():
 			self.cal_y()
 			self.update_pbest()
 			self.update_gbest()
-			self.plotTime(iter_num, before, time.time() )
+			self.xaxis.append( iter_num )
+			self.yaxis.append( time.time()-before )
 
 		self.gbest_y_hist.append(self.gbest_y)
-		
-		plt.plot(self.xaxis, self.yaxis)
-		plt.show()
-		
+		if self.timeplotbool:
+			self.timeplot()
 		return self
 
 	fit = run

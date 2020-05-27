@@ -2,9 +2,11 @@
 # Modified to fit this project
 
 import numpy as np
+import matplotlib.pyplot as plt
+import time
 
 class GeneticAlgorithm():
-	def __init__(self, fitness_function, pop_size=10, genome_length=20, lb=None, ub=None):
+	def __init__(self, fitness_function, pop_size=10, genome_length=20, lb=None, ub=None, timeplotbool = True):
 		self.population = None
 		self.fitness_function = fitness_function
 		self.number_of_pairs = None
@@ -14,6 +16,7 @@ class GeneticAlgorithm():
 		self.allow_random_parent = True
 		# Use single point crossover instead of uniform crossover
 		self.single_point_cross_over = False
+		self.timeplotbool = timeplotbool
 
 		self.pop_size = pop_size
 		self.genome_length = genome_length
@@ -21,10 +24,10 @@ class GeneticAlgorithm():
 		self.lb = -np.ones(self.genome_length) if lb is None else np.array(lb)
 		self.ub = np.ones(self.genome_length) if ub is None else np.array(ub)
 
+		self.xaxis=[]; self.yaxis=[];
+
 	def generate_binary_population(self):
-		self.population = np.array(
-			[ x for x in np.random.randint(self.lb , self.ub, (self.pop_size, self.genome_length) ) ]
-			)
+		self.population = np.random.randint( self.lb, self.ub+1, size=(self.pop_size, self.genome_length) )
 		self._update_fitness_vector()
 		return self.population
 
@@ -44,6 +47,17 @@ class GeneticAlgorithm():
 		self.best_genome = np.argmax(self.fitness_vector)
 		return self.population[self.best_genome], self.fitness_vector[self.best_genome]
 
+	def timeplot(self):
+		plt.figure( figsize=(25, 9))
+		plt.xlabel("Iteration Number")
+		plt.ylabel("Seconds taken")
+		plt.plot(self.xaxis, self.yaxis,
+			linewidth=4.0, color="#335241",
+			marker="o", mfc="#29AB65")
+		plt.savefig('plot/GA Iter time.png')
+		plt.show()
+
+
 	def run(self, iterations=1):
 		if self.population is None:
 			raise RuntimeError("Population has not been generated yet.")
@@ -51,17 +65,22 @@ class GeneticAlgorithm():
 			raise RuntimeError("The number of pairs (number_of_pairs) to be generated has not been configured.")
 
 		for iteration in range(iterations):
+			before = time.time()
 			parent_pairs = self._select_parents(self.number_of_pairs, self._get_parent_probabilities())
 			for parent_pair in parent_pairs:
 				children = self._generate_children(parent_pair)
 				mutated_children = [self._mutate(child, self.mutation_rate) for child in children]
-				# Possible changes here (combine with tabu search?)
 				for child in mutated_children:
 					child_fitness = self.get_fitness(child)
 					worst_genome = np.argmin(self.fitness_vector)
 					if self.get_fitness_vector()[worst_genome] < child_fitness:
 						self.population[worst_genome] = child
 						self.get_fitness_vector()[worst_genome] = child_fitness
+			self.xaxis.append( iteration )
+			self.yaxis.append( time.time()-before )
+		if self.timeplotbool:
+			self.timeplot()
+
 
 	def _get_parent_probabilities(self):
 		relative_fitness = self.fitness_vector / np.sum(self.fitness_vector)
