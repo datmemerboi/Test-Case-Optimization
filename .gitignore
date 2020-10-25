@@ -8,3 +8,5 @@ TCO_root/data/__pycache__
 TCO_root/index/__pycache__
 TCO_root/result/__pycache__
 TCO_root/TCO/__pycache__
+env/
+Test Case Opt.py

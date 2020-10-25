@@ -1,6 +1,6 @@
 var can = document.getElementById('result-graph');
 
-var chart = new Chart( can, {
+var chart = new Chart(can, {
 	type: 'bar',
 	data: {
 		labels : pso_xaxis,
@@ -35,7 +35,7 @@ var chart = new Chart( can, {
 });
 
 var can = document.getElementById('time');
-var chart = new Chart( can, {
+var chart = new Chart(can, {
 	type:'doughnut',
 	data: {
 		labels:['PSO', 'GA'],
