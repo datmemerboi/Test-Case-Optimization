@@ -20,17 +20,24 @@
 		show that both the datasets are <b><span id="equal-or-not"></span></b>.</p>
 	
 	<script type="text/javascript">
-		var ga_yaxis = {{GA.yaxis}};
-		var pso_xaxis = {{PSO.xaxis}}; var pso_yaxis = {{PSO.yaxis}};
+		var ga_yaxis = {{GA.y_axis}};
+		var pso_xaxis = {{PSO.x_axis}};
+		var pso_yaxis = {{PSO.y_axis}};
 		var pso_time = {{PSO.time}};
 		var ga_time = {{GA.time}};
+		var maximum_iterations = {{ maximum_iterations }};
 		
-		if( pso_time==ga_time )
+		if(pso_time == ga_time) {
 			document.getElementById('more-or-less').innerHTML = "the <b>same</b> time as"
-		else
-			pso_time>ga_time ? document.getElementById('more-or-less').innerHTML = "<b>more</b> time than" : document.getElementById('more-or-less').innerHTML = "<b>lesser</b> time than";
-		{{Equality}}==1 ? document.getElementById('equal-or-not').innerHTML = "equal" : document.getElementById('equal-or-not').innerHTML = "not equal"
+		}
+		else {
+			pso_time > ga_time
+				? document.getElementById('more-or-less').innerHTML = "<b>more</b> time than"
+				: document.getElementById('more-or-less').innerHTML = "<b>lesser</b> time than";
+		}
+		{{equality}} == 1
+			? document.getElementById('equal-or-not').innerHTML = "equal"
+			: document.getElementById('equal-or-not').innerHTML = "not equal";
 	</script>
-	
 	<script type="text/javascript" src="{%static 'js/charts/compare.js'%}"></script>
 {%endblock%}
