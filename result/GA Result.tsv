@@ -1,101 +1,101 @@
 TEST ID	TEST CASE	PRE-CONDITIONS	PRECEDENCE	COMPLEXITY	PRE_CON_COUNT	WEIGHTAGE	DIFF
-PAY_INIT_001	Check load of Payment page	PAY_BUTTON_002	H	9	22	206.1	13.900000000000006
-HOME_001	Test load of Home Page	LOAD_001	H	9	16	152.1	67.9
-LOAD_001	Test Page load functionality through URL	None	H	8	12	103.2	116.8
-PAY_PORTAL_003	Test redirect to Confirmation Page	PAY_PORTAL_002	H	8	8	71.2	148.8
-PAY_PORTAL_002	Test Transaction confirmation	PAY_INIT_002	H	10	6	69.0	151.0
-PAY_INIT_002	Test payment initiation	PAY_BUTTON_002	H	9	6	62.1	157.9
-PAYMENT_OPT_003	Test display of Options based on method	PAY_INIT_001	M	4	15	62.0	158.0
-PAY_BUTTON_002	Test Pay button functionality	PAY_BUTTON_001	M	4	13	54.0	166.0
-CONFIRM_001	Test load of Confirmation Page	PAY_PORTAL_003	M	5	6	32.5	187.5
-UPI_002	Test choose of UPI option	UPI_001	H	6	4	29.400000000000002	190.6
-EVENT_DETAIL_001	Test load of Page for particular event	None	H	6	4	29.400000000000002	190.6
-SEATS_003	Test choose seat from layout	SEATS_002	H	10	2	29.0	191.0
-SEATS_002	Check view of seat layout	SEATS_001	H	9	2	26.099999999999998	193.9
-BOOK_LOAD_001	Test load Page for booking ticket	None	M	7	3	24.5	195.5
-MOVIE_LOAD_001	Test load page for Particular Movie	None	H	6	3	23.4	196.6
-SHOWTIME_002	Test Choice of Showtime	SHOWTIME_001	H	6	3	23.4	196.6
-EVENT_DETAIL_004	Test Book button Functionality	EVENT_DETAIL_001	L	7	3	21.7	198.3
-CATEGORY_001	Test Choose Category Functionality	HOME_001	M	6	3	21.0	199.0
-SIGN_IN_001	Check initiation of Sign In	HOME_001	H	3	6	20.700000000000003	199.3
-BOOK_EVENT_004	Test choice of seats	BOOK_EVENT_003	H	10	1	19.0	201.0
-UPI_001	Check display of UPI options	PAYMENT_OPT_003	L	3	6	18.299999999999997	201.7
-SEARCHBAR_001	Check Input of Searchbar	HOME_001	H	3	5	17.700000000000003	202.3
-MOB_WALLET_002	Test make choice of Wallet option	PAYMENT_OPT_003	H	5	2	14.5	205.5
-VOUCHER_003	Check if voucher has been applied	VOUCHER_003	M	5	2	12.5	207.5
-RECOMMEND_001	Check Recommended list while Search	SEARCHBAR_001	M	7	1	10.5	209.5
-SHOWTIME_001	Check view of Showtimes & Cinema	BOOK_LOAD_001	M	4	2	10.0	210.0
-BOOK_EVENT_003	Test Add & Remove person functionality	BOOK_EVENT_001	M	4	2	10.0	210.0
-SEATS_001	Test choice of Number of Seats	SHOWTIME_002	L	3	3	9.3	210.7
-SELECT_CITY_001	Test City Choice using Icons	LOAD_001	M	6	1	9.0	211.0
-SEARCHBAR_003	Test Search Functionality	SEARCHBAR_001	H	10	0	9.0	211.0
-SEATS_004	Test lock of chosen seats	SEATS_001	H	10	0	9.0	211.0
-SELECT_CITY_003	Test City Choice from Region List	LOAD_001	H	4	1	7.6	212.4
-SELECT_CITY_002	Test Search City using Search Bar	LOAD_001	M	5	1	7.5	212.5
-SESSION_002	Test Session Timeout	PAY_INIT_001	M	3	2	7.5	212.5
-PAY_PORTAL_001	Test load of Payment Portal Page	PAY_INIT_002	H	8	0	7.2	212.8
-LOGIN_001	Test Login functionality	SIGN_IN_001	H	8	0	7.2	212.8
-SIGN_UP_002	Test Sign Up functionality	SIGN_UP_001	H	8	0	7.2	212.8
-BOOK_EVENT_001	Check view of Event time	EVENT_DETAIL_004	M	2	3	7.0	213.0
-EVENT_CONFIRM_002	Test transfer to Confirmation Page after payment	PAY_PORTAL_003	H	7	0	6.3	213.7
-CONFIRM_002	Check confirmed movie details display	CONFIRM_001	H	7	0	6.3	213.7
-EVENT_CONFIRM_001	Test transfer to Payment Init	BOOK_EVENT_004	H	6	0	5.4	214.6
-BOOK_DATE_001	Test Date Choice for show	BOOK_LOAD_001	H	6	0	5.4	214.6
-CONTACT_001	Test input of contact details	PAY_INIT_001	H	6	0	5.4	214.6
-CARD_001	Check Make Payment button function	PAYMENT_OPT_003	H	6	0	5.4	214.6
-SIGN_UP_001	Check switch to Sign Up button	SIGN_IN_001	M	2	2	5.0	215.0
-UPI_004	Test Input of Mobile Number	UPI_002	H	5	0	4.5	215.5
-CONFIRM_004	Check confirmed tickets display	CONFIRM_001	H	5	0	4.5	215.5
-NET_BANK_004	Check Make Payment button function	PAYMENT_OPT_003	H	5	0	4.5	215.5
-UPI_007	Check Make Payment button function	UPI_002	H	5	0	4.5	215.5
-UPI_005	Test Input of UPI ID	UPI_002	H	5	0	4.5	215.5
-LOGIN_002	Test Login API	SIGN_IN_001	M	8	0	4.0	216.0
-SIGN_UP_003	Test Sign Up API Integration	SIGN_UP_001	M	8	0	4.0	216.0
-CONFIRM_003	Check confirmed showtime display	CONFIRM_001	H	4	0	3.6	216.4
-UPI_006	Test Input of Bank Name	UPI_002	H	4	0	3.6	216.4
-MOB_WALLET_004	Check Make Payment button function	MOB_WALLET_002	H	4	0	3.6	216.4
-CATEGORY_002	Test Category change while search	SEARCHBAR_001	M	7	0	3.5	216.5
-PAY_PORTAL_004	Test redirect on cancelled transaction	PAY_PORTAL_002	M	7	0	3.5	216.5
-CONFIRM_007	Check confirmed Booking ID display	CONFIRM_001	M	7	0	3.5	216.5
-PAY_BUTTON_001	Check display of Pay button 	SEATS_003	L	1	3	3.1	216.9
-CONFIRM_009	Test SMS of confirmation	PAY_PORTAL_002	M	6	0	3.0	217.0
-CONFIRM_008	Test Mail of confirmation	PAY_PORTAL_002	M	6	0	3.0	217.0
-HOME_002	Test load of Home Page after City Icon Choice	SELECT_CITY_001	M	6	0	3.0	217.0
-NET_BANK_002	Test make choice of Bank from icon	PAYMENT_OPT_003	M	6	0	3.0	217.0
-HOME_003	Test load of Home Page after City Search Choice	SELECT_CITY_002	M	6	0	3.0	217.0
-PAYMENT_OPT_002	Test choice of Payment method	PAY_INIT_001	M	6	0	3.0	217.0
-LOAD_002	Test Page Reload without crashes	None	H	3	0	2.7	217.3
-VOUCHER_001	Test Voucher input	PAYMENT_OPT_003	M	5	0	2.5	217.5
-NET_BANK_003	Test make choice of Bank from list	PAYMENT_OPT_003	M	5	0	2.5	217.5
-CARD_001	Test input of Card Details	PAYMENT_OPT_003	M	5	0	2.5	217.5
-HOME_004	Test load of Home Page after Region List Choice	SELECT_CITY_003	M	5	0	2.5	217.5
-SESSION_001	Check display of Session Timer	PAY_INIT_001	L	2	1	2.2	217.8
-CONFIRM_005	Check QR code generation	CONFIRM_001	M	4	0	2.0	218.0
-BOOK_TICKETS_001	Test Book Ticket button Functionality	MOVIE_LOAD_001	M	4	0	2.0	218.0
-TICKET_AMOUNT_001	Test display of Payable amount	PAY_INIT_001	M	4	0	2.0	218.0
-UPI_003	Test choice of Other UPI option	UPI_001	M	4	0	2.0	218.0
-PAYMENT_OPT_001	Test display of Payment methods	PAY_INIT_001	M	4	0	2.0	218.0
-NET_BANK_001	Test display of Bank Options	PAYMENT_OPT_003	M	3	0	1.5	218.5
-BOOK_EVENT_002	Check view of Ticket prices	BOOK_EVENT_001	M	3	0	1.5	218.5
-MOB_WALLET_001	Check dispaly of mobile wallet options	PAYMENT_OPT_003	M	3	0	1.5	218.5
-EVENT_DETAIL_002	Check view of Event details	EVENT_DETAIL_001	M	3	0	1.5	218.5
-HOME_006	Test load of Home Page after Category choice	CATEGORY_001	M	3	0	1.5	218.5
-SESSION_005	Test Timer reset	SESSION_001	M	3	0	1.5	218.5
-SESSION_004	Test Start Again button function	SESSION_003	M	3	0	1.5	218.5
-SESSION_003	Check display of Timeout Message	SESSION_002	M	1	1	1.5	218.5
-SEARCHBAR_004	Test Search Results based on chosen Category	CATEGORY_001	M	3	0	1.5	218.5
-SEARCHBAR_002	Check Return back to Home	SEARCHBAR_001	M	2	0	1.0	219.0
-MOVIE_DETAILS_001	Check view of Details of a Movie	MOVIE_LOAD_001	M	2	0	1.0	219.0
-VOUCHER_002	Check Apply button	PAYMENT_OPT_003	M	2	0	1.0	219.0
-MOVIE_DETAILS_002	Check view of Rating of a Movie	MOVIE_LOAD_001	M	2	0	1.0	219.0
-RECOMMEND_002	Test change of Recommendation after Category	CATEGORY_001	L	8	0	0.8	219.2
-EVENT_DETAIL_003	Test Event venue map function	EVENT_DETAIL_001	L	6	0	0.6000000000000001	219.4
-MOB_WALLET_003	Check code display	MOB_WALLET_002	L	6	0	0.6000000000000001	219.4
-RECOMMEND_003	Test Filters in Recommended list	RECOMMEND_001	L	5	0	0.5	219.5
-CONFIRM_006	Check QR code display	CONFIRM_001	M	1	0	0.5	219.5
-TICKET_DETAILS_001	Test dispaly of Ticket Details	PAY_INIT_001	L	3	0	0.30000000000000004	219.7
-LOAD_003	Test 404 Error for Invalid URL in domain	None	L	3	0	0.30000000000000004	219.7
-SHOWTIME_003	Test display of Showtime selected	PAY_INIT_001	L	2	0	0.2	219.8
-LOGIN_003	Check switch to Login Button	SIGN_IN_001	L	2	0	0.2	219.8
-HOME_005	Test Return to Home Page on Logo Click	HOME_001	L	2	0	0.2	219.8
-HELP_001	Test help link functionality	HOME_001	L	2	0	0.2	219.8
+PAY_INIT_001	Check load of Payment page	PAY_BUTTON_002	H	9	22	206.1	6.099999999999994
+HOME_001	Test load of Home Page	LOAD_001	H	9	16	152.1	47.900000000000006
+LOAD_001	Test Page load functionality through URL	None	H	8	12	103.2	96.8
+PAY_PORTAL_003	Test redirect to Confirmation Page	PAY_PORTAL_002	H	8	8	71.2	128.8
+PAY_PORTAL_002	Test Transaction confirmation	PAY_INIT_002	H	10	6	69.0	131.0
+PAY_INIT_002	Test payment initiation	PAY_BUTTON_002	H	9	6	62.1	137.9
+PAYMENT_OPT_003	Test display of Options based on method	PAY_INIT_001	M	4	15	62.0	138.0
+PAY_BUTTON_002	Test Pay button functionality	PAY_BUTTON_001	M	4	13	54.0	146.0
+CONFIRM_001	Test load of Confirmation Page	PAY_PORTAL_003	M	5	6	32.5	167.5
+UPI_002	Test choose of UPI option	UPI_001	H	6	4	29.400000000000002	170.6
+EVENT_DETAIL_001	Test load of Page for particular event	None	H	6	4	29.400000000000002	170.6
+SEATS_003	Test choose seat from layout	SEATS_002	H	10	2	29.0	171.0
+SEATS_002	Check view of seat layout	SEATS_001	H	9	2	26.099999999999998	173.9
+BOOK_LOAD_001	Test load Page for booking ticket	None	M	7	3	24.5	175.5
+MOVIE_LOAD_001	Test load page for Particular Movie	None	H	6	3	23.4	176.6
+SHOWTIME_002	Test Choice of Showtime	SHOWTIME_001	H	6	3	23.4	176.6
+EVENT_DETAIL_004	Test Book button Functionality	EVENT_DETAIL_001	L	7	3	21.7	178.3
+CATEGORY_001	Test Choose Category Functionality	HOME_001	M	6	3	21.0	179.0
+SIGN_IN_001	Check initiation of Sign In	HOME_001	H	3	6	20.700000000000003	179.3
+BOOK_EVENT_004	Test choice of seats	BOOK_EVENT_003	H	10	1	19.0	181.0
+UPI_001	Check display of UPI options	PAYMENT_OPT_003	L	3	6	18.299999999999997	181.7
+SEARCHBAR_001	Check Input of Searchbar	HOME_001	H	3	5	17.700000000000003	182.3
+MOB_WALLET_002	Test make choice of Wallet option	PAYMENT_OPT_003	H	5	2	14.5	185.5
+VOUCHER_003	Check if voucher has been applied	VOUCHER_003	M	5	2	12.5	187.5
+RECOMMEND_001	Check Recommended list while Search	SEARCHBAR_001	M	7	1	10.5	189.5
+SHOWTIME_001	Check view of Showtimes & Cinema	BOOK_LOAD_001	M	4	2	10.0	190.0
+BOOK_EVENT_003	Test Add & Remove person functionality	BOOK_EVENT_001	M	4	2	10.0	190.0
+SEATS_001	Test choice of Number of Seats	SHOWTIME_002	L	3	3	9.3	190.7
+SELECT_CITY_001	Test City Choice using Icons	LOAD_001	M	6	1	9.0	191.0
+SEARCHBAR_003	Test Search Functionality	SEARCHBAR_001	H	10	0	9.0	191.0
+SEATS_004	Test lock of chosen seats	SEATS_001	H	10	0	9.0	191.0
+SELECT_CITY_003	Test City Choice from Region List	LOAD_001	H	4	1	7.6	192.4
+SELECT_CITY_002	Test Search City using Search Bar	LOAD_001	M	5	1	7.5	192.5
+SESSION_002	Test Session Timeout	PAY_INIT_001	M	3	2	7.5	192.5
+PAY_PORTAL_001	Test load of Payment Portal Page	PAY_INIT_002	H	8	0	7.2	192.8
+LOGIN_001	Test Login functionality	SIGN_IN_001	H	8	0	7.2	192.8
+SIGN_UP_002	Test Sign Up functionality	SIGN_UP_001	H	8	0	7.2	192.8
+BOOK_EVENT_001	Check view of Event time	EVENT_DETAIL_004	M	2	3	7.0	193.0
+EVENT_CONFIRM_002	Test transfer to Confirmation Page after payment	PAY_PORTAL_003	H	7	0	6.3	193.7
+CONFIRM_002	Check confirmed movie details display	CONFIRM_001	H	7	0	6.3	193.7
+EVENT_CONFIRM_001	Test transfer to Payment Init	BOOK_EVENT_004	H	6	0	5.4	194.6
+BOOK_DATE_001	Test Date Choice for show	BOOK_LOAD_001	H	6	0	5.4	194.6
+CONTACT_001	Test input of contact details	PAY_INIT_001	H	6	0	5.4	194.6
+CARD_001	Check Make Payment button function	PAYMENT_OPT_003	H	6	0	5.4	194.6
+SIGN_UP_001	Check switch to Sign Up button	SIGN_IN_001	M	2	2	5.0	195.0
+UPI_004	Test Input of Mobile Number	UPI_002	H	5	0	4.5	195.5
+CONFIRM_004	Check confirmed tickets display	CONFIRM_001	H	5	0	4.5	195.5
+NET_BANK_004	Check Make Payment button function	PAYMENT_OPT_003	H	5	0	4.5	195.5
+UPI_007	Check Make Payment button function	UPI_002	H	5	0	4.5	195.5
+UPI_005	Test Input of UPI ID	UPI_002	H	5	0	4.5	195.5
+LOGIN_002	Test Login API	SIGN_IN_001	M	8	0	4.0	196.0
+SIGN_UP_003	Test Sign Up API Integration	SIGN_UP_001	M	8	0	4.0	196.0
+CONFIRM_003	Check confirmed showtime display	CONFIRM_001	H	4	0	3.6	196.4
+UPI_006	Test Input of Bank Name	UPI_002	H	4	0	3.6	196.4
+MOB_WALLET_004	Check Make Payment button function	MOB_WALLET_002	H	4	0	3.6	196.4
+CATEGORY_002	Test Category change while search	SEARCHBAR_001	M	7	0	3.5	196.5
+PAY_PORTAL_004	Test redirect on cancelled transaction	PAY_PORTAL_002	M	7	0	3.5	196.5
+CONFIRM_007	Check confirmed Booking ID display	CONFIRM_001	M	7	0	3.5	196.5
+PAY_BUTTON_001	Check display of Pay button 	SEATS_003	L	1	3	3.1	196.9
+CONFIRM_009	Test SMS of confirmation	PAY_PORTAL_002	M	6	0	3.0	197.0
+CONFIRM_008	Test Mail of confirmation	PAY_PORTAL_002	M	6	0	3.0	197.0
+HOME_002	Test load of Home Page after City Icon Choice	SELECT_CITY_001	M	6	0	3.0	197.0
+NET_BANK_002	Test make choice of Bank from icon	PAYMENT_OPT_003	M	6	0	3.0	197.0
+HOME_003	Test load of Home Page after City Search Choice	SELECT_CITY_002	M	6	0	3.0	197.0
+PAYMENT_OPT_002	Test choice of Payment method	PAY_INIT_001	M	6	0	3.0	197.0
+LOAD_002	Test Page Reload without crashes	None	H	3	0	2.7	197.3
+VOUCHER_001	Test Voucher input	PAYMENT_OPT_003	M	5	0	2.5	197.5
+NET_BANK_003	Test make choice of Bank from list	PAYMENT_OPT_003	M	5	0	2.5	197.5
+CARD_001	Test input of Card Details	PAYMENT_OPT_003	M	5	0	2.5	197.5
+HOME_004	Test load of Home Page after Region List Choice	SELECT_CITY_003	M	5	0	2.5	197.5
+SESSION_001	Check display of Session Timer	PAY_INIT_001	L	2	1	2.2	197.8
+CONFIRM_005	Check QR code generation	CONFIRM_001	M	4	0	2.0	198.0
+BOOK_TICKETS_001	Test Book Ticket button Functionality	MOVIE_LOAD_001	M	4	0	2.0	198.0
+TICKET_AMOUNT_001	Test display of Payable amount	PAY_INIT_001	M	4	0	2.0	198.0
+UPI_003	Test choice of Other UPI option	UPI_001	M	4	0	2.0	198.0
+PAYMENT_OPT_001	Test display of Payment methods	PAY_INIT_001	M	4	0	2.0	198.0
+NET_BANK_001	Test display of Bank Options	PAYMENT_OPT_003	M	3	0	1.5	198.5
+BOOK_EVENT_002	Check view of Ticket prices	BOOK_EVENT_001	M	3	0	1.5	198.5
+MOB_WALLET_001	Check dispaly of mobile wallet options	PAYMENT_OPT_003	M	3	0	1.5	198.5
+EVENT_DETAIL_002	Check view of Event details	EVENT_DETAIL_001	M	3	0	1.5	198.5
+HOME_006	Test load of Home Page after Category choice	CATEGORY_001	M	3	0	1.5	198.5
+SESSION_005	Test Timer reset	SESSION_001	M	3	0	1.5	198.5
+SESSION_004	Test Start Again button function	SESSION_003	M	3	0	1.5	198.5
+SESSION_003	Check display of Timeout Message	SESSION_002	M	1	1	1.5	198.5
+SEARCHBAR_004	Test Search Results based on chosen Category	CATEGORY_001	M	3	0	1.5	198.5
+SEARCHBAR_002	Check Return back to Home	SEARCHBAR_001	M	2	0	1.0	199.0
+MOVIE_DETAILS_001	Check view of Details of a Movie	MOVIE_LOAD_001	M	2	0	1.0	199.0
+VOUCHER_002	Check Apply button	PAYMENT_OPT_003	M	2	0	1.0	199.0
+MOVIE_DETAILS_002	Check view of Rating of a Movie	MOVIE_LOAD_001	M	2	0	1.0	199.0
+RECOMMEND_002	Test change of Recommendation after Category	CATEGORY_001	L	8	0	0.8	199.2
+EVENT_DETAIL_003	Test Event venue map function	EVENT_DETAIL_001	L	6	0	0.6000000000000001	199.4
+MOB_WALLET_003	Check code display	MOB_WALLET_002	L	6	0	0.6000000000000001	199.4
+RECOMMEND_003	Test Filters in Recommended list	RECOMMEND_001	L	5	0	0.5	199.5
+CONFIRM_006	Check QR code display	CONFIRM_001	M	1	0	0.5	199.5
+TICKET_DETAILS_001	Test dispaly of Ticket Details	PAY_INIT_001	L	3	0	0.30000000000000004	199.7
+LOAD_003	Test 404 Error for Invalid URL in domain	None	L	3	0	0.30000000000000004	199.7
+SHOWTIME_003	Test display of Showtime selected	PAY_INIT_001	L	2	0	0.2	199.8
+LOGIN_003	Check switch to Login Button	SIGN_IN_001	L	2	0	0.2	199.8
+HOME_005	Test Return to Home Page on Logo Click	HOME_001	L	2	0	0.2	199.8
+HELP_001	Test help link functionality	HOME_001	L	2	0	0.2	199.8
